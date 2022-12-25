@@ -1,0 +1,16 @@
+{{ if .IsNamedParams }}
+
+<div class="jsfiddle-viewer" id="code-frame-{{ .Get "fiddleId" }}">
+    <progress id="loader-{{ .Get "fiddleId" }}" class="progress is-large is-info" max="100">60%</progress>
+    <script async src="//jsfiddle.net/{{ .Get "userId"}}/{{ .Get "fiddleId" }}/embed/{{ if (.Get "tabs") }}{{ .Get "tabs" }}{{ end }}{{ if (.Get "dark") }}{{"/dark"}}{{ end }}"
+        id="{{ .Get "fiddleId" }}" onload="iframeLoaded(this)"></script>
+</div>
+{{ end }}
+
+
+<script>
+    function iframeLoaded(event) {
+        document.getElementById("loader-"+event.id).style.display = "none";
+        document.getElementById("code-frame-"+event.id).style.display = "block";
+    }
+</script>

@@ -1,0 +1,149 @@
+.footer {
+    color: #ffffff;
+    background-color: #363636;
+}
+
+footer.footer div.content p {
+    margin: 0em;
+}
+
+h1.hero-title {
+    color: #000 !important;
+}
+
+.date-item {
+    color: #aaaaaa;
+}
+
+.weekly-schedule  {
+    background-color: #ffffff;
+    color: #000;
+}
+.weekly-schedule a {
+    color: #3366bb;
+}
+
+.weekly-schedule thead{
+    background-color: #fff;
+    color: #000;
+}
+
+.weekly-schedule tr:hover {
+    background-color: #bfbfbf;
+    color: #000;
+}
+.weekly-schedule tr a, .weekly-schedule tr:hover a {
+    color: #3366bb;
+}
+
+.weekly-schedule tr.is-selected {
+    background-color: #404040;
+    color: #fff;
+}
+
+.weekly-schedule tr.is-selected a {
+    color: #fff;
+}
+
+.weekly-schedule tr td.event_col {
+    border-style: none;
+}
+
+.weekly-schedule .is-passed {
+    background-color: #cecece;
+    color: #000000;
+}
+
+.weekly-schedule span.link-category-group{
+    padding: 5px 2px;
+
+    border-radius: 5px; 
+    background-color: #f96c0093;
+    color: #000;
+}
+
+.weekly-schedule thead tr:hover, .weekly-schedule tr.progress_row, .weekly-schedule tr.progress_row:hover{
+    background-color: #fff;
+}
+
+.weekly-schedule tr td span.tag a{
+    color: #ffffff;
+}
+
+a.slide-link {
+    text-decoration: underline;
+}
+
+ul.readings-list li {
+    list-style-type: square;
+}
+
+a.white-link {
+    color: #ffffff;
+}
+
+a.white-link:visited {
+    color: #ffffff;
+}
+
+.ms-teams-button {
+    color: #6264a7;
+}
+
+.to-right {
+    float: right;
+}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #eee;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li {
+    list-style: outside none none !important;
+}
+
+.list-of-topics-box {
+    background-color: #f5f8fc;
+    margin: 1.5em;
+}
+
+h1.list-of-topics-title {
+    text-align: center;
+    margin: 1.5em;
+}
+
+.list-of-topics-box p.date {
+    margin-top: 0.5em;
+    line-height: 1.5;
+    display: block;
+    font-size: 12px;
+    color: #818181;
+}
+
+.info-box {
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    color: black;
+    font-size: 88%;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+a.external{
+    color: #3366bb;
+    background-image: url(/images/external-link-ltr-icon.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+}

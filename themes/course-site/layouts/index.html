@@ -1,0 +1,74 @@
+{{ partial "header.html" . }}
+<section class="hero">
+    <div class="hero-head">
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title hero-title">
+                {{$.Page.Site.Data.meta.name}} <span class="tag is-info">{{$.Page.Site.Data.meta.semester}}</span>
+            </h1>
+            <h2 class="subtitle">
+                {{$.Page.Site.Data.meta.description}}
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Schedule
+                        </p>
+
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <ul>
+                                <li>Lecture:</li>
+                                <ul>
+                                    <li>Time: {{$.Page.Site.Data.meta.lecture.time}}</li>
+                                    <li>Location: {{$.Page.Site.Data.meta.lecture.location}}</li>
+                                </ul>
+                                <li>Lab:</li>
+                                <ul>
+                                    <li>Time: {{$.Page.Site.Data.meta.lab.time}}</li>
+                                    <li>Location: F{{$.Page.Site.Data.meta.lab.location}}</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Instructor
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>{{$.Page.Site.Data.meta.instructor.name}}</p>
+                            <ul>
+                                <li>Office Hours: {{$.Page.Site.Data.meta.instructor.officeHours}} <sup>*</sup></li>
+                                <li>Location: {{$.Page.Site.Data.meta.instructor.officeLocation}}</li>
+                            </ul>
+                            <p>Join our <a href={{$.Page.Site.Data.meta.msteamsInvite}}>MS Teams group/team </a>for announcements
+                                and questions.</p>
+                            <p><b>* </b>{{$.Page.Site.Data.meta.instructor.note}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 id="calendar" class="title is-2">Calendar</h1>
+        {{ partial "calendar.html" . }}
+
+    </div>
+</section>
+{{ partial "footer.html" . }}

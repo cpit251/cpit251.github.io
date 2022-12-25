@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<h1 class="title is-3 list-of-topics-title">{{.Title}}</h1>
+<main>
+    <div>
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+        {{.Content}}
+    </div>
+
+    <!-- Ranges through content/posts/*.md -->
+    {{ range .Data.Pages.ByPublishDate }}
+    <div class="box list-of-topics-box">
+        <h4 class="title is-4"><a href="{{.Permalink}}">{{.Title}}</a></h4>
+        <p>{{.Description}}</p>
+        <p class="date">{{ time.Format "Monday, Jan 2, 2006" .Date  }}</p>
+    </div>
+    {{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}

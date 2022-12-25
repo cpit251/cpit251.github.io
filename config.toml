@@ -1,0 +1,14 @@
+baseURL = "https://cpit251.github.io"
+languageCode = "en-us"
+title = "Software Engineering (I)"
+theme = "course-site"
+enableRobotsTXT = true
+pygmentsCodeFences = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    anchorLineNos = true
+    guessSyntax = false
+    codeFences = true

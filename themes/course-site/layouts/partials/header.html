@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ "css/main.css" | absURL }}">
+
+    <style>
+        @media only screen and (max-width: 480px) {
+            .navbar .navbar-section {
+                display: block;
+            }
+        }
+    </style>
+    <script defer src="https://use.fontawesome.com/releases/v6.0.0/js/all.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+    <title>{{$.Page.Site.Data.meta.course}} | {{ .Title }}</title>
+</head>
+
+<body>
+    <section>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">{{$.Page.Site.Data.meta.course}} </a>
+                <a role="button" class="navbar-burger" data-target="nav-menu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="nav-menu" class="navbar-menu">
+                <div class="navbar-start">
+                    <!-- navbar items -->
+                    <a href="/syllabus" class="navbar-item">Syllabus</a>                    
+                    <a href="/#calendar" class="navbar-item">Calendar</a>
+                    <a href="/examples" class="navbar-item">Notes & Examples</a>
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                          Labs
+                        </a>
+                        <div class="navbar-dropdown">
+                          {{ range seq 12  }}
+                          <a href="/labs/lab-{{.}}/" class="navbar-item">
+                                Lab-{{.}}
+                          </a>
+                          {{ end }}
+                       
+
+                        </div>
+                      </div>
+                      <a href="/miscellaneous" class="navbar-item">Miscellaneous</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <a class="bd-sl-button button ms-teams-button" data-social-network="Microsoft" data-social-action="Microsoft" data-social-target={{$.Page.Site.Data.meta.slack}}
+                                    target="_blank" href={{$.Page.Site.Data.meta.msteams}}>
+                                    <span class="icon">
+                                        <i class="fab fa-microsoft"></i>
+                                    </span>
+                                    <span>
+                                        MS Teams
+                                    </span>
+                                </a>
+                                <a class="bd-sl-button button is-light" data-social-network="GitHub" data-social-action="github" data-social-target={{$.Page.Site.Data.meta.github}}
+                                target="_blank" href={{$.Page.Site.Data.meta.github}}>
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    GitHub
+                                </span>
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </section>

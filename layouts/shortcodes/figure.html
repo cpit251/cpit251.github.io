@@ -1,0 +1,10 @@
+{{ if .IsNamedParams }}
+<div class="info-box">
+    <figure>
+        <img src="{{ .Get "src" }}" alt={{ .Get "caption" }}>
+        <figcaption {{ if (.Get "color") }} style= "color: {{.Get "color"}}" {{ end }}>
+            {{ .Get "caption" }}
+        </figcaption>
+    <figure>
+</div>
+{{ end }}

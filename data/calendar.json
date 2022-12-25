@@ -1,0 +1,231 @@
+[
+    {
+        "week": 1,
+        "date": "Dec 4th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [
+        ],
+        "code": [],
+        "notes": [{"name": "", "link": ""}],
+        "assignments": [],
+        "labs": []
+    },
+    {
+        "week": 2,
+        "date": "Dec 11th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [
+        ],
+        "assignments": [
+            {
+                "title": "Assignment 1",
+                "link": "/assignments/assignment-1/",
+                "dueDate": "Dec. 17th"
+            }
+        ],
+        "labs": [
+            
+        ]
+    },
+    {
+        "week": 3,
+        "date": "Dec 18th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [
+        ],
+        "notes": [{"name": "", "link": ""}
+        ],
+        "code": [
+        ],
+        "assignments": [
+        ],
+        "labs": [
+        ],
+        "event":
+            {
+                "description": "Long weekend - No classes on Sunday (18/12/2022, 24/05/1444)"
+            }
+    },
+    {
+        "week": 4,
+        "date": "Dec 25th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [],
+        "assignments": [],
+        "labs": [
+            3
+        ]
+    },
+    {
+        "week": 5,
+        "date": "Jan 1st",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [],
+        "assignments": [            
+        ],
+        "labs": [
+            4
+        ]
+    },
+    {
+        "week": 6,
+        "date": "Jan 8th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [],
+        "assignments": [
+        ],
+        "labs": [
+        ]
+    },
+    {
+        "week": 7,
+        "date": "Jan 15th",
+        "topics": [
+        ],
+        "readings": [
+
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}
+        ],
+        "code": [
+        ],
+        "assignments": [],
+        "labs": [
+        ],
+        "event":
+        {
+            "description": "Long weekend - No classes on Sunday (15/01/2023, 22/06/1444)"
+        }
+    },
+    {
+        "week": 8,
+        "date": "Jan 22nd",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}
+        ],
+        "code": [],
+        "assignments": [],
+        "labs": [
+        
+        ],
+        "event":
+        {
+            "description": "Midterm exams. Exam date: TBD"
+        }
+    },
+    {
+        "date": "March 13",
+        "topics": [],
+        "readings": [],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [],
+        "assignments": [],
+        "labs": [],
+        "event": {
+            "description": "second semester vacation week"
+        }
+    },
+    {
+        "week": 9,
+        "date": "Jan 29th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [
+        ],
+        "assignments": [],
+        "labs": [
+            8
+        ]
+    },
+    {
+        "week": 10,
+        "date": "Feb 5th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [],
+        "notes": [{"name": "", "link": ""}],
+        "code": [
+        ],
+        "assignments": [],
+        "labs": [
+            9
+        ]
+    },
+    {
+        "week": 11,
+        "date": "Feb 12th",
+        "topics": [
+           
+        ],
+        "readings": [
+        ],
+        "slides": [
+        ],
+        "notes": [{"name": "", "link": ""}],
+        "assignments": [],
+        "labs": [
+            
+        ]
+    },
+    {
+        "week": 12,
+        "date": "Feb 19th",
+        "topics": [
+        ],
+        "readings": [
+        ],
+        "slides": [
+        ],
+        "notes": [
+            {"name": "", "link": ""}
+        ],
+        "code": [
+        ],
+        "assignments": [
+        ],
+        "labs": [
+            
+        ],
+        "event": {
+            "description": "Holiday - No classes on Wednesday and Thursday (22-23/02/2023, 02-03/08/1444)"
+        }
+    }
+]

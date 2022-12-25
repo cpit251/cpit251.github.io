@@ -1,0 +1,134 @@
+<div class="table-container">
+  <table class="table weekly-schedule table-container is-fullwidth">
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Topic</th>
+        <th>Readings</th>
+        <th>Assignments/Labs</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $.Page.Site.Data.calendar}}
+      {{ if .week }}
+      <tr class="event_row row_{{ .week }} progress_row">
+        <td class="event_col" colspan="4">
+          <progress class="progress is-black" value={{ .week }} max={{ sub (len $.Page.Site.Data.calendar)
+            1}}>45%</progress>
+        </td>
+      </tr>
+
+      {{ end }}
+      {{ if .event }}
+      <tr class="event_row row_{{ .week }}">
+        <td class="event_col" colspan="4">
+          <div class="icon-text">
+            <span class="icon has-text-info">
+              <i class="fas fa-info-circle"></i>
+            </span>
+            <span class="tag is-info">{{ .event.description }}</span>
+          </div>
+        </td>
+      </tr>
+      {{ end }}
+      <tr class="row_{{ .week }}">
+        <td>
+          <ul>
+            <li>{{ .week }}</li>
+            <li class="date-item">{{ .date }}</li>
+          </ul>
+        </td>
+        <td>
+          {{ range .topics }}
+          <ul>
+            <li>{{.}}</li>
+          </ul>
+          {{end}}
+          <ul>
+            {{if gt (len .slides) 0}}
+            <br/>
+            <span class="link-category-group" style="">
+              <i class="far fa-file-powerpoint"></i> Lecture slides:
+            </span>
+            <br/>
+            {{range .slides}}
+            <li><a href={{.link}} target="_blank" class="slide-link">{{.title}}</a></li>
+            {{end}} {{end}}
+          </ul>
+          <ul>
+            {{if gt (len .notes) 0}}
+            <br/>
+            <span class="link-category-group">
+              <i class="fa-solid fa-pen"></i> Lecture notes:
+            </span>
+            <br/>
+            {{range .notes}}
+            <li><a href={{.link}} target="_blank" class="slide-link">{{.title}}</a></li>
+            {{end}}{{end}}
+          </ul>
+          <ul>
+            {{if gt (len .code) 0}}
+            <br/>
+            <span class="link-category-group">
+              <i class="far fa-file-code"></i> Demo & code examples:
+            </span>
+            <br/>
+            {{range .code}}
+            <li><a href={{.link}} target="_blank" class="slide-link">{{.title}}</a></li>
+            {{end}}{{end}}
+          </ul>
+
+        </td>
+        <td>
+          {{ range .readings }}
+          <ul class="readings-list">
+            {{if .link}}
+            <li><a href={{.link}} class="slide-link">{{.name}}</a></li>
+            {{else}}
+            <li>{{.name}}</li>
+            {{end}}
+          </ul>
+          {{ end }}
+        </td>
+        <td>
+          {{ range .assignments }}
+          <div class="tags has-addons">
+            <span class="tag is-link"><a href={{.link}} title="{{.title}} is due on {{.dueDate}}" class="white-link">{{.title}}</a></span>
+          </div>
+          {{ end }}
+          {{ range .labs }}
+          <ul>
+            {{if .}}
+            <li><a href=/labs/lab-{{.}} class="slide-link">Lab {{.}}</a></li>
+            {{end}}
+          </ul>
+          {{ end }}
+        </td>
+      </tr>
+
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+<script>
+    // Fall 2022: first day of classes: Dec 4th, 2022; last day of classes: March 2nd, 2023.
+    var startDate = new Date("2022-12-04");
+    var activeWeek = Math.floor((new Date() - startDate) / (1000 * 7 * 24 * 60 * 60)) + 1
+
+
+  if (activeWeek > 0 && activeWeek < 15) {
+    var rows = document.getElementsByClassName("row_" + activeWeek);
+    [].forEach.call(rows, (row) => {
+      row.classList.add("is-selected");
+    });
+    count = activeWeek - 1;
+    while (count > 0) {
+      var pastRows = document.getElementsByClassName("row_" + count);
+      [].forEach.call(pastRows, (row) => {
+        row.classList.add("is-passed");
+      });
+      count = count - 1;
+    }
+  }
+</script>

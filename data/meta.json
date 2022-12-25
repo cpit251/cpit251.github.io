@@ -1,0 +1,27 @@
+{
+    "university": "King Abdulaziz University",
+    "college": "Faculty of Computing and Information Technology",
+    "department": "Department of Information Technology",
+    "name": "CPIT-251 Software Engineering (I)",
+    "course": "CPIT-251",
+    "semester": "Winter 2022",
+    "description": "Foundations of software engineering, techniques, and methodologies",
+    "lecture": {
+        "time": "Sunday, Tuesday, Thursday 11:00AM-12:40PM",
+        "location": "FCIT building, Lab 15"
+    },
+    "lab": {
+        "time": "Thursday 11:00-11:40PM",
+        "location": "FCIT building, lab 15"
+    },
+    "instructor": {
+        "name": "Khalid Alharbi, Ph.D.",
+        "officeHours": "Sunday and Tuesday 10:00AM-11:00AM",
+        "officeLocation": "FCIT building, 1st floor, office #113",
+        "note":"Please feel free reach out to me on Teams outside of office hours for questions. I'll try to answer you as quickly as possible, and I'm always happy to set up an ad hoc video/voice call on Teams whenever possible."
+    },
+    "msteams": "https://teams.microsoft.com/l/team/19%3a6OWfv0LDsnEss78Mt13lA-0WypNFMUseabbGTq2Rhc41%40thread.tacv2/conversations?groupId=00280f9d-1fa9-4542-b539-1a3d5ca80c7f&tenantId=2d3194e3-1654-46bd-bae2-ad37ba11b0ae",
+    "msteamsInvite": "https://teams.microsoft.com/l/team/19%3a6OWfv0LDsnEss78Mt13lA-0WypNFMUseabbGTq2Rhc41%40thread.tacv2/conversations?groupId=00280f9d-1fa9-4542-b539-1a3d5ca80c7f&tenantId=2d3194e3-1654-46bd-bae2-ad37ba11b0ae",
+    "github": "https://github.com/cpit251",
+    "githubRepo": "https://github.com/cpit251/cpit251.github.io"
+}

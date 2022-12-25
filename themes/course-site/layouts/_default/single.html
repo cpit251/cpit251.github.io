@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+<section class="section">
+    <div class="to-right">
+        <a href="https://gitlab.com/cpit405/cpit405.gitlab.io/edit/master/content/{{ .File.Path }}" target="_blank"
+            class="edit-page icon-pencil">
+            <i class="far fa-edit"></i>
+            Edit Page
+        </a>
+    </div>
+    <div class="container">
+        <h1 class="title">{{ .Title }}</h1>
+        {{ if and (gt .WordCount 200 ) (ne .Params.toc false) }}
+        <aside id="toc_container">
+            <h2 class="subtitle" id="toc_title">Table of Content</h2>
+            {{ .TableOfContents }}
+        </aside>
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+{{ partial "footer.html" . }}
