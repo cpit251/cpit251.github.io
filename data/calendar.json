@@ -3,8 +3,18 @@
         "week": 1,
         "date": "Dec 4th",
         "topics": [
+            "Introduction",
+            "The nature of Software",
+            "The chaning nature of Software",
+            "Legacy Software",
+            "Professional software development",
+            "Software engineering ethics"
         ],
         "readings": [
+            {
+                "name": "Chapter 1",
+                "link": ""
+            }
         ],
         "slides": [
         ],
@@ -17,8 +27,17 @@
         "week": 2,
         "date": "Dec 11th",
         "topics": [
+            "The software process",
+            "Software process models",
+            "Process activities", 
+            "Coping with change",
+            "Process improvement"
         ],
         "readings": [
+            {
+                "name": "Chapter 2",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
@@ -39,8 +58,17 @@
         "week": 3,
         "date": "Dec 18th",
         "topics": [
+            "Agile Software Development",
+            "Agile methods",
+            "Agile development techniques",
+            "Agile project management",
+            "Scaling agile methods"
         ],
         "readings": [
+            {
+                "name": "Chapter 3",
+                "link": ""
+            }
         ],
         "slides": [
         ],
@@ -61,8 +89,17 @@
         "week": 4,
         "date": "Dec 25th",
         "topics": [
+            "Architectural Design",
+            "Architectural design decisions",
+            "Architectural views",
+            "Architectural patterns",
+            "Application architectures"
         ],
         "readings": [
+            {
+                "name": "Chapter 6",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
@@ -76,8 +113,17 @@
         "week": 5,
         "date": "Jan 1st",
         "topics": [
+            "Design and Implementation",
+            "Object-oriented design using the UML",
+            "Design patterns",
+            "Implementation issues",
+            "Open-source development"
         ],
         "readings": [
+            {
+                "name": "Chapter 7",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
@@ -92,8 +138,17 @@
         "week": 6,
         "date": "Jan 8th",
         "topics": [
+            "Software Testing",
+            "Development testing",
+            "Test-driven development",
+            "Release testing",
+            "User testing"
         ],
         "readings": [
+            {
+                "name": "Chapter 8",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
@@ -107,8 +162,16 @@
         "week": 7,
         "date": "Jan 15th",
         "topics": [
+            "Software Evolution",
+            "Evolution processes",
+            "Legacy systems",
+            "Software maintenance"
         ],
         "readings": [
+            {
+                "name": "Chapter 9",
+                "link": ""
+            }
 
         ],
         "slides": [],
@@ -128,8 +191,16 @@
         "week": 8,
         "date": "Jan 22nd",
         "topics": [
+            "Version management",
+            "System building",
+            "Change management",
+            "Release management"
         ],
         "readings": [
+            {
+                "name": "Chapter 25",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}
@@ -145,9 +216,20 @@
         }
     },
     {
+        "week": 9,
         "date": "March 13",
-        "topics": [],
-        "readings": [],
+        "topics": [
+            "Software Reuse",
+            "The reuse landscape",
+            "Application frameworks",
+            "Software product lines",
+            "Application system reuse "],
+        "readings": [
+            {
+                "name": "Chapter 15",
+                "link": ""
+            }
+        ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
         "code": [],
@@ -155,27 +237,18 @@
         "labs": []
     },
     {
-        "week": 9,
-        "date": "Jan 29th",
-        "topics": [
-        ],
-        "readings": [
-        ],
-        "slides": [],
-        "notes": [{"name": "", "link": ""}],
-        "code": [
-        ],
-        "assignments": [],
-        "labs": [
-            
-        ]
-    },
-    {
         "week": 10,
         "date": "Feb 5th",
         "topics": [
+            "Component-based software engineering",
+            "Components and component models",
+            "Component composition"
         ],
         "readings": [
+            {
+                "name": "Chapter 16",
+                "link": ""
+            }
         ],
         "slides": [],
         "notes": [{"name": "", "link": ""}],
@@ -190,9 +263,18 @@
         "week": 11,
         "date": "Feb 12th",
         "topics": [
+            "Distributed software engineering",
+            "Distributed systems",
+            "Client–server computing",
+            "Architectural patterns for distributed systems",
+            "Software as a service"
            
         ],
         "readings": [
+            {
+                "name": "Chapter 17",
+                "link": ""
+            }
         ],
         "slides": [
         ],
@@ -205,6 +287,7 @@
         "week": 12,
         "date": "Feb 19th",
         "topics": [
+            "Final exams"
         ],
         "readings": [
         ],
