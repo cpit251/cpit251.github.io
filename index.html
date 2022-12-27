@@ -1,0 +1,815 @@
+<!doctype html><html lang=en>
+<head>
+<meta name=generator content="Hugo 0.91.2">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css>
+<link rel=stylesheet type=text/css href=https://cpit251.github.io/css/main.css>
+<style>@media only screen and (max-width:480px){.navbar .navbar-section{display:block}}</style>
+<script defer src=https://use.fontawesome.com/releases/v6.0.0/js/all.js></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{const a=Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),0);a.length>0&&a.forEach(a=>{a.addEventListener('click',()=>{const b=a.dataset.target,c=document.getElementById(b);a.classList.toggle('is-active'),c.classList.toggle('is-active')})})})</script>
+<title>CPIT-251 | Software Engineering (I)</title>
+</head>
+<body>
+<section>
+<nav class="navbar is-dark" role=navigation aria-label="main navigation">
+<div class=navbar-brand>
+<a class=navbar-item href=/>CPIT-251 </a>
+<a role=button class=navbar-burger data-target=nav-menu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+</div>
+<div id=nav-menu class=navbar-menu>
+<div class=navbar-start>
+<a href=/syllabus class=navbar-item>Syllabus</a>
+<a href=/#calendar class=navbar-item>Calendar</a>
+<a href=/examples class=navbar-item>Notes & Examples</a>
+<div class="navbar-item has-dropdown is-hoverable">
+<a class=navbar-link>
+Labs
+</a>
+<div class=navbar-dropdown>
+<a href=/labs/lab-1/ class=navbar-item>
+Lab-1
+</a>
+<a href=/labs/lab-2/ class=navbar-item>
+Lab-2
+</a>
+<a href=/labs/lab-3/ class=navbar-item>
+Lab-3
+</a>
+<a href=/labs/lab-4/ class=navbar-item>
+Lab-4
+</a>
+<a href=/labs/lab-5/ class=navbar-item>
+Lab-5
+</a>
+<a href=/labs/lab-6/ class=navbar-item>
+Lab-6
+</a>
+<a href=/labs/lab-7/ class=navbar-item>
+Lab-7
+</a>
+<a href=/labs/lab-8/ class=navbar-item>
+Lab-8
+</a>
+<a href=/labs/lab-9/ class=navbar-item>
+Lab-9
+</a>
+<a href=/labs/lab-10/ class=navbar-item>
+Lab-10
+</a>
+<a href=/labs/lab-11/ class=navbar-item>
+Lab-11
+</a>
+<a href=/labs/lab-12/ class=navbar-item>
+Lab-12
+</a>
+</div>
+</div>
+<a href=/miscellaneous class=navbar-item>Miscellaneous</a>
+</div>
+<div class=navbar-end>
+<div class=navbar-item>
+<div class="field is-grouped">
+<p class=control>
+<a class="bd-sl-button button ms-teams-button" data-social-network=Microsoft data-social-action=Microsoft data-social-target='target="_blank"' href="https://teams.microsoft.com/l/team/19%3a6OWfv0LDsnEss78Mt13lA-0WypNFMUseabbGTq2Rhc41%40thread.tacv2/conversations?groupId=00280f9d-1fa9-4542-b539-1a3d5ca80c7f&tenantId=2d3194e3-1654-46bd-bae2-ad37ba11b0ae">
+<span class=icon>
+<i class="fab fa-microsoft"></i>
+</span>
+<span>
+MS Teams
+</span>
+</a>
+<a class="bd-sl-button button is-light" data-social-network=GitHub data-social-action=github data-social-target=https://github.com/cpit251 target=_blank href=https://github.com/cpit251>
+<span class=icon>
+<i class="fab fa-github"></i>
+</span>
+<span>
+GitHub
+</span>
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</section>
+<section class=hero>
+<div class=hero-head>
+</div>
+<div class=hero-body>
+<div class=container>
+<h1 class="title hero-title">
+CPIT-251 Software Engineering (I) <span class="tag is-info">Winter 2022</span>
+</h1>
+<h2 class=subtitle>
+Foundations of software engineering, techniques, and methodologies
+</h2>
+</div>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<div class=columns>
+<div class=column>
+<div class=card>
+<header class=card-header>
+<p class=card-header-title>
+Schedule
+</p>
+</header>
+<div class=card-content>
+<div class=content>
+<ul>
+<li>Lecture:</li>
+<ul>
+<li>Time: Sunday, Tuesday, Thursday 11:00AM-12:40PM</li>
+<li>Location: FCIT building, Lab 15</li>
+</ul>
+<li>Lab:</li>
+<ul>
+<li>Time: Thursday 11:00-11:40PM</li>
+<li>Location: FFCIT building, lab 15</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=column>
+<div class=card>
+<header class=card-header>
+<p class=card-header-title>
+Instructor
+</p>
+</header>
+<div class=card-content>
+<div class=content>
+<p>Khalid Alharbi, Ph.D.</p>
+<ul>
+<li>Office Hours: Sunday and Tuesday 10:00AM-11:00AM <sup>*</sup></li>
+<li>Location: FCIT building, 1st floor, office #113</li>
+</ul>
+<p>Join our <a href="https://teams.microsoft.com/l/team/19%3a6OWfv0LDsnEss78Mt13lA-0WypNFMUseabbGTq2Rhc41%40thread.tacv2/conversations?groupId=00280f9d-1fa9-4542-b539-1a3d5ca80c7f&tenantId=2d3194e3-1654-46bd-bae2-ad37ba11b0ae">MS Teams group/team </a>for announcements
+and questions.</p>
+<p><b>* </b>Please feel free reach out to me on Teams outside of office hours for questions. I'll try to answer you as quickly as possible, and I'm always happy to set up an ad hoc video/voice call on Teams whenever possible.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id=calendar class="title is-2">Calendar</h1>
+<div class=table-container>
+<table class="table weekly-schedule table-container is-fullwidth">
+<thead>
+<tr>
+<th>Week</th>
+<th>Topic</th>
+<th>Readings</th>
+<th>Assignments/Labs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="event_row row_1 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=1 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_1>
+<td>
+<ul>
+<li>1</li>
+<li class=date-item>Dec 4th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Introduction</li>
+</ul>
+<ul>
+<li>The nature of Software</li>
+</ul>
+<ul>
+<li>The chaning nature of Software</li>
+</ul>
+<ul>
+<li>Legacy Software</li>
+</ul>
+<ul>
+<li>Professional software development</li>
+</ul>
+<ul>
+<li>Software engineering ethics</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 1</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_2 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=2 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_2>
+<td>
+<ul>
+<li>2</li>
+<li class=date-item>Dec 11th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>The software process</li>
+</ul>
+<ul>
+<li>Software process models</li>
+</ul>
+<ul>
+<li>Process activities</li>
+</ul>
+<ul>
+<li>Coping with change</li>
+</ul>
+<ul>
+<li>Process improvement</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 2</li>
+</ul>
+</td>
+<td>
+<div class="tags has-addons">
+<span class="tag is-link"><a href=/assignments/assignment-1/ title="Assignment 1 is due on Dec. 17th" class=white-link>Assignment 1</a></span>
+</div>
+</td>
+</tr>
+<tr class="event_row row_3 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=3 max=11>45%</progress>
+</td>
+</tr>
+<tr class="event_row row_3">
+<td class=event_col colspan=4>
+<div class=icon-text>
+<span class="icon has-text-info">
+<i class="fas fa-info-circle"></i>
+</span>
+<span class="tag is-info">Long weekend - No classes on Sunday (18/12/2022, 24/05/1444)</span>
+</div>
+</td>
+</tr>
+<tr class=row_3>
+<td>
+<ul>
+<li>3</li>
+<li class=date-item>Dec 18th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Agile Software Development</li>
+</ul>
+<ul>
+<li>Agile methods</li>
+</ul>
+<ul>
+<li>Agile development techniques</li>
+</ul>
+<ul>
+<li>Agile project management</li>
+</ul>
+<ul>
+<li>Scaling agile methods</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 3</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_4 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=4 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_4>
+<td>
+<ul>
+<li>4</li>
+<li class=date-item>Dec 25th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Architectural Design</li>
+</ul>
+<ul>
+<li>Architectural design decisions</li>
+</ul>
+<ul>
+<li>Architectural views</li>
+</ul>
+<ul>
+<li>Architectural patterns</li>
+</ul>
+<ul>
+<li>Application architectures</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 6</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_5 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=5 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_5>
+<td>
+<ul>
+<li>5</li>
+<li class=date-item>Jan 1st</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Design and Implementation</li>
+</ul>
+<ul>
+<li>Object-oriented design using the UML</li>
+</ul>
+<ul>
+<li>Design patterns</li>
+</ul>
+<ul>
+<li>Implementation issues</li>
+</ul>
+<ul>
+<li>Open-source development</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 7</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_6 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=6 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_6>
+<td>
+<ul>
+<li>6</li>
+<li class=date-item>Jan 8th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Software Testing</li>
+</ul>
+<ul>
+<li>Development testing</li>
+</ul>
+<ul>
+<li>Test-driven development</li>
+</ul>
+<ul>
+<li>Release testing</li>
+</ul>
+<ul>
+<li>User testing</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 8</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_7 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=7 max=11>45%</progress>
+</td>
+</tr>
+<tr class="event_row row_7">
+<td class=event_col colspan=4>
+<div class=icon-text>
+<span class="icon has-text-info">
+<i class="fas fa-info-circle"></i>
+</span>
+<span class="tag is-info">Long weekend - No classes on Sunday (15/01/2023, 22/06/1444)</span>
+</div>
+</td>
+</tr>
+<tr class=row_7>
+<td>
+<ul>
+<li>7</li>
+<li class=date-item>Jan 15th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Software Evolution</li>
+</ul>
+<ul>
+<li>Evolution processes</li>
+</ul>
+<ul>
+<li>Legacy systems</li>
+</ul>
+<ul>
+<li>Software maintenance</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 9</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_8 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=8 max=11>45%</progress>
+</td>
+</tr>
+<tr class="event_row row_8">
+<td class=event_col colspan=4>
+<div class=icon-text>
+<span class="icon has-text-info">
+<i class="fas fa-info-circle"></i>
+</span>
+<span class="tag is-info">Midterm exam: TBD</span>
+</div>
+</td>
+</tr>
+<tr class=row_8>
+<td>
+<ul>
+<li>8</li>
+<li class=date-item>Jan 22nd</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Version management</li>
+</ul>
+<ul>
+<li>System building</li>
+</ul>
+<ul>
+<li>Change management</li>
+</ul>
+<ul>
+<li>Release management</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 25</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_9 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=9 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_9>
+<td>
+<ul>
+<li>9</li>
+<li class=date-item>March 13</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Software Reuse</li>
+</ul>
+<ul>
+<li>The reuse landscape</li>
+</ul>
+<ul>
+<li>Application frameworks</li>
+</ul>
+<ul>
+<li>Software product lines</li>
+</ul>
+<ul>
+<li>Application system reuse </li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 15</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_10 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=10 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_10>
+<td>
+<ul>
+<li>10</li>
+<li class=date-item>Feb 5th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Component-based software engineering</li>
+</ul>
+<ul>
+<li>Components and component models</li>
+</ul>
+<ul>
+<li>Component composition</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 16</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_11 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=11 max=11>45%</progress>
+</td>
+</tr>
+<tr class=row_11>
+<td>
+<ul>
+<li>11</li>
+<li class=date-item>Feb 12th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Distributed software engineering</li>
+</ul>
+<ul>
+<li>Distributed systems</li>
+</ul>
+<ul>
+<li>Client–server computing</li>
+</ul>
+<ul>
+<li>Architectural patterns for distributed systems</li>
+</ul>
+<ul>
+<li>Software as a service</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+<ul class=readings-list>
+<li>Chapter 17</li>
+</ul>
+</td>
+<td>
+</td>
+</tr>
+<tr class="event_row row_12 progress_row">
+<td class=event_col colspan=4>
+<progress class="progress is-black" value=12 max=11>45%</progress>
+</td>
+</tr>
+<tr class="event_row row_12">
+<td class=event_col colspan=4>
+<div class=icon-text>
+<span class="icon has-text-info">
+<i class="fas fa-info-circle"></i>
+</span>
+<span class="tag is-info">Holiday - No classes on Wednesday and Thursday (22-23/02/2023, 02-03/08/1444)</span>
+</div>
+</td>
+</tr>
+<tr class=row_12>
+<td>
+<ul>
+<li>12</li>
+<li class=date-item>Feb 19th</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Final exams</li>
+</ul>
+<ul>
+</ul>
+<ul>
+<br>
+<span class=link-category-group>
+<i class="fa-solid fa-pen"></i> Lecture notes:
+</span>
+<br>
+<li><a href='target="_blank"' class=slide-link></a></li>
+</ul>
+<ul>
+</ul>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script>var startDate=new Date("2022-12-04"),activeWeek=Math.floor((new Date-startDate)/(1e3*7*24*60*60))+1,rows,pastRows;if(activeWeek>0&&activeWeek<15)for(rows=document.getElementsByClassName("row_"+activeWeek),[].forEach.call(rows,a=>{a.classList.add("is-selected")}),count=activeWeek-1;count>0;)pastRows=document.getElementsByClassName("row_"+count),[].forEach.call(pastRows,a=>{a.classList.add("is-passed")}),count=count-1</script>
+</div>
+</section>
+<footer class=footer>
+<div class="content has-text-centered">
+<p>CPIT-251 Software Engineering (I)</p>
+<p>Department of Information Technology</p>
+<p>Faculty of Computing and Information Technology</p>
+<p>King Abdulaziz University</p>
+<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/ title="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License">
+<img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png>
+</a>
+<a href=https://bulma.io title="Made with Bulma">
+<img src=/images/made-with-bulma.png alt="Made with Bulma" style=height:31px;width:128px>
+</a>
+<a href=https://gohugo.io title="Built using Hugo">
+<img src=/images/gohugo.png alt="Built using Hugo" width=28 height=31>
+</a>
+<a href='title="Hosted' on gitlab">
+<img src=/images/GitLab-Mark-32px.png alt="Hosted on GitLab" width=28 height=31>
+</a>
+</div>
+</footer>
+</body>
+</html>
