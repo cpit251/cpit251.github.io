@@ -14,7 +14,12 @@
             {
                 "name": "Chapter 1",
                 "link": ""
+            },
+            {
+                "name": "Inside the Hidden World of Legacy IT Systems, IEEE Specturm by Robert Charette, 2020.",
+                "link": "https://spectrum.ieee.org/inside-hidden-world-legacy-it-systems"
             }
+            
         ],
         "slides": [
         ],
@@ -37,6 +42,10 @@
             {
                 "name": "Chapter 2",
                 "link": ""
+            },
+            {
+                "name": "No Silver Bullet — Essence and Accident in Software Engineering by Fred Brooks, 1986 [PDF]",
+                "link": "http://worrydream.com/refs/Brooks-NoSilverBullet.pdf"
             }
         ],
         "slides": [],
