@@ -8,11 +8,11 @@
     </div>
 
     <!-- Ranges through content/posts/*.md -->
-    {{ range .Data.Pages.ByPublishDate }}
+    {{ range .Data.Pages.ByWeight }}
     <div class="box list-of-topics-box">
         <h4 class="title is-4"><a href="{{.Permalink}}">{{.Title}}</a></h4>
         <p>{{.Description}}</p>
-        <p class="date">{{ time.Format "Monday, Jan 2, 2006" .Date  }}</p>
+        <p class="date">Last modified on {{ time.Format "Monday, Jan 2, 2006" .Lastmod  }}</p>
     </div>
     {{ end }}
 
