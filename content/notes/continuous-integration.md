@@ -98,10 +98,10 @@ To create a badge, you need the following information:
 To generate your own status badge, you will need to know, and substitute, the following variables in the code snippets below:
 
 - <PROJECT_NAME> The name of the repo on GitHub. Example: `unit-testing-coverage-demo`
-- <ORG_NAME> - The organization or user name the project's repo belongs to. Example `cpit251` is the owner of our sample project on GitHub.
-- <VCS> -  The version control system provider (gh for “github”)
-- <LINK> - The link you want the status badge to go to when clicked (example: the pipeline overview page)
-- API token [Optional]: This is required for private repos.
+- <ORG_NAME> The organization or user name the project's repo belongs to. Example `cpit251` is the owner of our sample project on GitHub.
+- <VCS> The version control system provider (gh for “github”)
+- <LINK> The link you want the status badge to go to when clicked (example: the pipeline overview page)
+- <circle-token> [Optional] An API token is required for private repos.
 
 Before we create a badge, we wanted to add a `README.md` file to our project. create a new file named `README.md`.
 
