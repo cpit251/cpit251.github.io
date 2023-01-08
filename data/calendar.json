@@ -12,11 +12,11 @@
         ],
         "readings": [
             {
-                "name": "Chapter 1",
+                "title": "Chapter 1",
                 "link": ""
             },
             {
-                "name": "Inside the Hidden World of Legacy IT Systems, IEEE Specturm by Robert Charette, 2020.",
+                "title": "Inside the Hidden World of Legacy IT Systems, IEEE Specturm by Robert Charette, 2020.",
                 "link": "https://spectrum.ieee.org/inside-hidden-world-legacy-it-systems"
             }
             
@@ -24,7 +24,7 @@
         "slides": [
         ],
         "code": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "assignments": [],
         "labs": []
     },
@@ -40,16 +40,16 @@
         ],
         "readings": [
             {
-                "name": "Chapter 2",
+                "title": "Chapter 2",
                 "link": ""
             },
             {
-                "name": "No Silver Bullet — Essence and Accident in Software Engineering by Fred Brooks, 1986 [PDF]",
+                "title": "No Silver Bullet; Fred Brooks, 1986 [PDF]",
                 "link": "http://worrydream.com/refs/Brooks-NoSilverBullet.pdf"
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [
         ],
         "assignments": [
@@ -75,13 +75,13 @@
         ],
         "readings": [
             {
-                "name": "Chapter 3",
+                "title": "Chapter 3",
                 "link": ""
             }
         ],
         "slides": [
         ],
-        "notes": [{"name": "", "link": ""}
+        "notes": [{"title": "", "link": ""}
         ],
         "code": [
         ],
@@ -106,12 +106,12 @@
         ],
         "readings": [
             {
-                "name": "Chapter 6",
+                "title": "Chapter 6",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [],
         "assignments": [],
         "labs": [
@@ -130,12 +130,12 @@
         ],
         "readings": [
             {
-                "name": "Chapter 7",
+                "title": "Chapter 7",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [],
         "assignments": [            
         ],
@@ -155,17 +155,20 @@
         ],
         "readings": [
             {
-                "name": "Chapter 8",
+                "title": "Chapter 8",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "Midterm exam notes", "link": "/etc/midterm-exam-notes/"}],
         "code": [],
         "assignments": [
         ],
         "labs": [
-        ]
+        ],
+        "event":{
+            "description": "Midterm exam on 11/01/2023 at 11:00AM"
+        }
     },
     {
         "week": 7,
@@ -178,13 +181,13 @@
         ],
         "readings": [
             {
-                "name": "Chapter 9",
+                "title": "Chapter 9",
                 "link": ""
             }
 
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}
+        "notes": [{"title": "", "link": ""}
         ],
         "code": [
         ],
@@ -207,12 +210,12 @@
         ],
         "readings": [
             {
-                "name": "Chapter 25",
+                "title": "Chapter 25",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}
+        "notes": [{"title": "", "link": ""}
         ],
         "code": [],
         "assignments": [],
@@ -235,12 +238,12 @@
             "Application system reuse "],
         "readings": [
             {
-                "name": "Chapter 15",
+                "title": "Chapter 15",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [],
         "assignments": [],
         "labs": []
@@ -255,12 +258,12 @@
         ],
         "readings": [
             {
-                "name": "Chapter 16",
+                "title": "Chapter 16",
                 "link": ""
             }
         ],
         "slides": [],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [
         ],
         "assignments": [],
@@ -281,13 +284,13 @@
         ],
         "readings": [
             {
-                "name": "Chapter 17",
+                "title": "Chapter 17",
                 "link": ""
             }
         ],
         "slides": [
         ],
-        "notes": [{"name": "", "link": ""}],
+        "notes": [{"title": "", "link": ""}],
         "code": [],
         "assignments": [],
         "labs": []
@@ -303,7 +306,7 @@
         "slides": [
         ],
         "notes": [
-            {"name": "", "link": ""}
+            {"title": "", "link": ""}
         ],
         "code": [
         ],

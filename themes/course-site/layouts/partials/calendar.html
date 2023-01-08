@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th>Week</th>
-        <th>Topic</th>
+        <th>Topics</th>
         <th>Readings</th>
         <th>Assignments/Labs</th>
       </tr>
@@ -83,9 +83,9 @@
           {{ range .readings }}
           <ul class="readings-list">
             {{if .link}}
-            <li><a href={{.link}} class="slide-link">{{.name}}</a></li>
+            <li><a href={{.link}} class="slide-link">{{.title}}</a></li>
             {{else}}
-            <li>{{.name}}</li>
+            <li>{{.title}}</li>
             {{end}}
           </ul>
           {{ end }}
