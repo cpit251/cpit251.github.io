@@ -6,7 +6,16 @@ description: This lecture note discusses how to connect your Java application to
 draft: false
 ---
 
-In this lecture note, you will learn how to connect your Java application into a database. While we will use postgres database as an example, the same principles apply to any major relational database. We will create a simple todo list application with tasks that can be marked as done.
+In this lecture note, you will learn how to connect your Java application into a database and perform CRUD (create, read, update, and delete) operations.
+
+We will be using PostgreSQL as our example database server. Postgres is a powerful open source object-relational database system that has been in active development since 1986. A large number of organizations and businesses use PostgreSQL as their primary database for core products including Microsoft, Google, Amazon AWS, Instagram, Reddit, and VMware.[↗](https://www.postgresql.org/about/sponsors/)
+
+While we will use PostgreSQL database as an example, the same concepts and principles will also apply to any major relational database that has a supported JDBC driver (e.g., MySQL/MariaDB, Oracle, DB2, and Microsoft SQL Server). 
+
+#### To do list application
+We will create a simple todo list application with tasks that can be marked as done.
+
+![todo list app image](/images/notes/db/todolist-paper.png)
 
 > This lecture notes was implemented on PostgreSQL 15.1 and Java 18.0. Other versions may still work given the fact that the used interfaces/APIs have been very stable.
 
@@ -30,12 +39,12 @@ They should be all installed using the Postgres installer, so you do not need to
 2. **Install PostgreSQL JDBC Driver**: Next, the installer will launch stack builder, which should ask you to select additional tools and drivers to install with your postgres installation. We will need to install the PostgreSQL JDBC Driver, which allows Java programs to connect to a PostgreSQL database.
   ![Postgres pgAdmin installation](/images/notes/db/postgres-installation-3.png)
 
-3. **Start pgAdmin**: Enter the root password you set during installation. Then, select the database server from the left pane and enter the same root password.
+3. **Start pgAdmin**: Enter the root password you specified during installation. Next, select the database server from the left pane and enter the same root password.
   ![pgAdmin start server](/images/notes/db/postgres-pgadmin-1.png)
-4. **Create a database**: Expand the database server (Postgres 15) and right click to create a database.
+4. **Create a database**: Expand the database server (Postgres 15) and right click to create a database and selecting a database name (e.g., `tododb`).
   ![pgAdmin create a database](/images/notes/db/postgres-pgadmin-2.png)
-  - Enter the database name (e.g., I used `tododb` for this example).
-5. **Create a table:** On pgAdmin, expand the database `tododb` -> Schemas -> public -> Right click on Tables and select create Table. Create a table with the following columns:
+  
+5. **Create a table:** On pgAdmin, expand the database `tododb` -> Schemas -> public -> Right click on Tables and select create Table. Create a table with the name (e.g., `todo`) and the following columns:
 
 | Name  | Data type            | Length | Not NULL | Primary key | Default
 | ----- | -------------------- | ------ | -------  | -----------  | ----------- |
@@ -61,11 +70,13 @@ They should be all installed using the Postgres installer, so you do not need to
         <version>42.5.1</version>
     </dependency>
     ```
-    - Right click on the `pom.xml` file and select **Maven** -> **Reload project**
+  - Right click on the `pom.xml` file and select **Maven** -> **Reload project** to download the new dependency.
 
 
 ## 3. Implement the Java database connection and clients
-- Create the database connection class next to the main class with the name **DBConnection** and replace your username and password values with the one you chose in the first step.
+- Create the database connection class with the name **DBConnection** and replace your username and password values with the one you chose in the first step.
+
+> **Note:** The use of hard-coded passwords and secrets increases the possibility of security breaches in your application. You should never embed passwords and other secrets (e.g., API keys) in your source code. See the extra credit activity at the end of this note.
 
 {{< highlight java "linenos=table,hl_lines=19-20, linenostart=1" >}}
 import java.sql.Connection;
@@ -215,16 +226,19 @@ ID: 1 Task: Do the laundry. Done: false
 ```
 
 - Open pgAdmin to see the values in the database:
-- Right clickon the `todo` table and select **View/Edit Data** -> **All Rows**
+- Right click on the `todo` table and select **View/Edit Data** -> **All Rows**
   - ![pgAdmin view table](/images/notes/db/postgres-pgadmin-4.png)
 - You should see the values in the database table as listed below:
   - ![pgAdmin view table](/images/notes/db/postgres-pgadmin-5.png)
+- You can also achieve the same result by executing SQL queries directly in pgAdmin using the Query Tool: **Right Click on the database** -> **Query Tool** and run the following SQL query:
+    ```sql
+    SELECT * FROM todo;
+    ```
 
-
-That's how you connect to a postgres database in Java!
 
 
 ### Extra credit
-- Remove the hardcoded database credentials in line # and use environment variables (the highlighted code in the _DBConnection_ class).
+- Remove the hardcoded database credentials in the `DBConnection.java` class in the highlighted code lines (19-20) and use environment variables.
 - Implement the update method (the highlighted code in the _Task_ class)
+- Add a delete method to delete a todo item by its id.
 
