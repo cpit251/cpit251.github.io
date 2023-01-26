@@ -12,3 +12,6 @@ pygmentsCodeFences = true
     anchorLineNos = true
     guessSyntax = false
     codeFences = true
+[params]
+  ghOrg = "cpit251"
+  ghRepo = "cpit251.github.io"
