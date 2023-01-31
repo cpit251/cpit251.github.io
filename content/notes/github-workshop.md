@@ -9,7 +9,7 @@ draft: false
 **Location:** 
 - FCIT Auditorium 
 - ![Zoom](/images/Zoom_us.svg) [Join Zoom Meeting Link](https://us06web.zoom.us/j/86074791735?pwd=eXBHU2IyRXB3WTdXWTl6eldXcXZkQT09)
-- Get started by downloading the [git workshop desktop app](https://github.com/cpit251/git-it#git-it).
+- Get started by downloading the [git workshop desktop app](https://github.com/cpit251/git-it/releases/tag/4.1.0).
 
 
 
