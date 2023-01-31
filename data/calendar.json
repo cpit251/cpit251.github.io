@@ -12,19 +12,19 @@
         ],
         "readings": [
             {
-                "title": "Chapter 1",
-                "link": ""
-            },
-            {
                 "title": "Inside the Hidden World of Legacy IT Systems, IEEE Specturm by Robert Charette, 2020.",
                 "link": "https://spectrum.ieee.org/inside-hidden-world-legacy-it-systems"
             }
             
         ],
         "slides": [
+            {
+                "title": "Chapter 1",
+                "link": "https://docs.google.com/presentation/d/14Yt3hjULxPJADlNoJQj1Wh-HBVcZkM18/edit?usp=share_link&ouid=106817924127479172429&rtpof=true&sd=true"
+            }
         ],
         "code": [],
-        "notes": [{"title": "", "link": ""}],
+        "notes": [],
         "assignments": [],
         "labs": []
     },
