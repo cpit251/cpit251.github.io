@@ -22,4 +22,7 @@ This workshop will be offered on Zoom and uploaded to YouTube. There is a limit 
 
 
 
-
+## CPIT 251
+Students who are taking CPIT-251 are required to complete the workshop activity by
+accepting the following assignment on GitHub Classroom and following the submission instructions:
+- [https://classroom.github.com/a/qjt-CwDj](https://classroom.github.com/a/qjt-CwDj)
