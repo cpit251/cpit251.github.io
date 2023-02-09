@@ -19,7 +19,7 @@ For a complete description of Spring boot and how its relate to the Spring frame
 
 ## Building a REST API for a ToDo app
 
-We're going to build a simple ToDo list API using Spring boot, which is an extension of the Spring framework.. The API will have the following four endpoints:
+We're going to build a simple ToDo list API using Spring boot, which is an extension of the Spring framework. The API will have three endpoints:
 
 - HTTP GET method that returns a todo item by its Id.
   ```
