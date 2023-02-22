@@ -9,6 +9,8 @@ description: "This lecture note presents an introduction to unit testing in Java
 
 ![https://xkcd.com/1700/](https://imgs.xkcd.com/comics/new_bug.png)
 
+Source: [xkcd.com/1700/](https://xkcd.com/1700/)
+
 
 ![](https://img.shields.io/badge/coverage-90%25-green)
 ![](https://img.shields.io/badge/coverage-60%25-orange)
@@ -77,7 +79,7 @@ To run the test in Intellij IDEA, right click on the test file and select run as
 
 ![running junit test in IDEA](/images/notes/unit-testing/idea-run-unit-test.png)
 
-You can also run the maven test cycle in Intellij IDEA, open the Maven window as shown below:
+You can also run the maven test cycle to run your test suite. In Intellij IDEA, open the Maven window and run the test cycle as shown below:
 
 ![running maven test cycle in IDEA](/images/notes/unit-testing/idea-run-maven-test-cycle.png)
 
@@ -90,28 +92,28 @@ public String getGradeLetter(int grade) {
     if(grade < 0 || grade >100){
         throw new IllegalArgumentException("Grades can not be below 0 and above 100.");
     }
-    else if (grade >=0 && grade < 60){
+    else if (grade < 60){
         return "F";
     }
-    else if (grade >=60 && grade <65) {
+    else if (grade <65) {
         return "D";
     }
-    else if (grade >=65 && grade <70) {
+    else if (grade <70) {
         return "D+";
     }
-    else if (grade >=70 && grade <75) {
+    else if (grade <75) {
         return "C";
     }
-    else if (grade >=75 && grade <80) {
+    else if (grade <80) {
         return "C+";
     }
-    else if (grade >=80 && grade <85) {
+    else if (grade <85) {
         return "B";
     }
-    else if (grade >=85 && grade <90) {
+    else if (grade <90) {
         return "B+";
     }
-    else if (grade >=90 && grade <95) {
+    else if (grade <95) {
         return "A";
     }
     return "A+";
@@ -210,14 +212,12 @@ Re-run the test with coverage, and you should see that the test is coverage is n
 
 
 ## Test and Coverage Automation
-We can automate running unit testing and coverage report. Test automation can be part of continous integration (CI) pipeline. There are many CI tools out there that facilitate creating testing and coverage pipeline. Popluar (CI) services include [circleci]() and [Travis CI](https://www.travis-ci.com/)
+We can automate running unit testing and coverage report. Test automation can be part of your continous integration (CI) pipeline. There are many CI tools out there that facilitate creating testing and coverage pipeline. [Circleci](https://circleci.com) and [Travis CI](https://www.travis-ci.com/) are examples of widley used CI services.
 
-There are also a number of services that can read coverage reports, calculate the coverage percentage, and generate a badge that you can place in your README file of your project. Populare code coverage services include [coveralls.io](https://coveralls.io/) and [codecov](https://about.codecov.io/). These tools can show you which parts of your code aren’t covered by your test suite.
-
-For more information, refer to the [continuous integration (CI) lecture note.](/notes/continuous-integration/).
+There are also a number of services that can read coverage reports, calculate the coverage percentage, and generate a badge that you can place in your README file of your project (e.g., ![](https://img.shields.io/badge/coverage-90%25-green)). Populare code coverage services include [coveralls.io](https://coveralls.io/) and [codecov](https://about.codecov.io/). These services can show you which parts of your code aren’t covered by your test suite. We discuss how to use these services in the [continuous integration (CI) lecture note.](/notes/continuous-integration/).
 
 
-#### Questions
+### Questions
 - The current project has 100% code coverage for the `Calculator` class. Does this mean it's free of bugs? Why?
 - Why is it important to choose a diverse set of test scenarios even if 100% code coverage is achieved?
   - **Hint:** Change the add method to return the result of multiplying two numbers instead of adding them.
