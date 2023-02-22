@@ -4,7 +4,7 @@ date: 2023-01-05T22:34:22+03:00
 lastmod: 2023-01-06T09:30:51+03:00
 weight: 3
 draft: false
-description: "This lecture note will guide you through everything you need to know about continuous integration (CI). We’ll go through an example of how to use a CI service (circleCI) with a version control service (GitHub) to automate the process of building and testing your software."
+description: "This lecture note will guide you through everything you need to know about continuous integration (CI). We’ll go through an example of how to use a CI service (circleCI) with a version control service (GitHub) to automate the process of building, testing, and generating code coverage reports."
 ---
 
 ![Continuous Integration (CI)](/images/notes/ci/continuous-integration-CI.png)
@@ -133,7 +133,121 @@ This should be rendered as shown below:
 
 [![cpit251](https://circleci.com/gh/cpit251/unit-testing-coverage-demo.svg?style=svg)](https://app.circleci.com/pipelines/github/cpit251/unit-testing-coverage-demo)
 
+## Generating Code Coverage Reports
+As discussed in the previous lecture note on [unit testing and coverage](/notes/unit-testing/), there are several services that can read coverage reports, calculate the coverage percentage, and generate a badge that you can place in your README file of your project. Examples of popular code coverage services are [coveralls.io](https://coveralls.io/) and [codecov](https://about.codecov.io/). These services can show you which parts of your code aren’t covered by your test suite. We are going to see how to generate code coverage using **codecov** for a java project.
+
+
+We will generate a coverage report using a maven plugin called [jacoco-maven-plugin](https://www.eclemma.org/jacoco/trunk/doc/maven.html), which uses a line code coverage library called _JaCoCo_ that generates code coverage report. This plugin will execute the JaCoCo report goal during the Maven test phase (i.e., when running `mvn test`). We will use this report and upload it to Codecov as a part of our CI workflow. 
+
+#### Setup
+Open the `pom.xml` file and add the `jacoco-maven-plugin` under `<build></plugins>`:
+
+```
+<plugin>
+  <groupId>org.jacoco</groupId>
+  <artifactId>jacoco-maven-plugin</artifactId>
+  <version>0.8.8</version>
+  <executions>
+    <execution>
+      <id>prepare-agent</id>
+      <goals>
+        <goal>prepare-agent</goal>
+      </goals>
+    </execution>
+    <!-- report is attached to Maven test phase -->
+    <execution>
+      <id>report</id>
+      <phase>test</phase>
+      <goals>
+        <goal>report</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+```
+Commit your code and push it to GitHub.
+Login on [codecov](https://codecov.io) with your GitHub account.
+
+Select your project from the list of GitHub projects you own:
+
+![codecov select a project](/images/notes/ci/codecov-select-project.png)
+
+Select other CI to setup the project with CircleCI and copy the value of the environment variable `CODECOV_TOKEN`.
+
+![codecov setup new project](/images/notes/ci/codecov-setup-project.png)
+
+
+
+Login on [CircleCI](https://circleci.com). In the dashboard, select your GitHub project.
+
+Click on **Project Settings** -> **environment variables**
+
+
+![CircleCI settings](/images/notes/ci/circleci-settings.png)
+
+![CircleCI environment variables](/images/notes/ci/circleci-add-env-variables-0.png)
+
+Add CodeCov's environment variable to CircleCI.
+
+![CircleCI environment variables](/images/notes/ci/circleci-add-env-variables-1.png)
+![CircleCI environment variables](/images/notes/ci/circleci-add-env-variables-2.png)
+
+
+
+
+CircleCI uses the term **orb** for reusable set of YAML configuration. It's essentially a set of configuration options that can be imported in one line. We will use [CodeCov orb for CircleCI](https://circleci.com/developer/orbs/orb/codecov/codecov).
+
+Open the CircleCI's config file in your IDE or editor at `.circelci/config.yml` and replace it with the following:
+
+```yaml
+version: 2.1
+orbs:
+  codecov: codecov/codecov@3
+
+jobs:
+  build:
+    docker:
+      - image: cimg/openjdk:18.0
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: Install dependencies
+          command: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      # Then run your tests and collect coverage!
+      - run:
+          name: Run tests and collect coverage
+          command: mvn -B test
+      # Upload coverage to codecov.
+      # CodeCov token must be stored as an environment variable in CircleCI dashboard.
+      - codecov/upload
+
+workflow:
+  version: 2.1
+  build-test:
+    jobs:
+      - build
+```
+
+You should be able to see the code coverage on CodeCov as shown in [this link](https://app.codecov.io/gh/cpit251/unit-testing-coverage-demo)
+
+
+## Adding Coverage Badge
+Just like the badge that we added for status of our CircleCI build and test pipeline, we can add a badge for code coverage to showcase the code coverage and quality of our project.
+
+To add a code coverage badge, go to your CodeCov dashboard -> **Settings** -> **Badges & Graphs** and copy the Markdown code for the live badge and place it in your `README.md` file:
+
+![codecov settings](/images/notes/ci/codecov-badge-settings.png)
+
+
+Once you add the badge to your README.md file, commit, and push to GitHub. You should see a badge like the one below:
+
+[![codecov](https://codecov.io/gh/cpit251/unit-testing-coverage-demo/branch/main/graph/badge.svg?token=I50I256DZB)](https://codecov.io/gh/cpit251/unit-testing-coverage-demo)
+
 ## Conclusion
 
-You've learned how to create a CI pipeline using a modern CI service, CircleCI, with a version control service, GitHub, to automate the process of building and testing your project. You're expected to have unit testing and a CI pipeline in your project and all future assignments.
+You've learned how to create a CI pipeline using a modern CI service, CircleCI, with a version control service, GitHub, to automate the process of building and testing your project. We also explored how to generate code coverage report for your project using a code coverage service, CodeCov. 
+
+
+You're expected to have unit testing, a CI pipeline, and code coverage of at least 75% in your project and all future assignments.
 
